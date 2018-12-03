@@ -11,12 +11,13 @@ thing = nil
 
 loop do
   print "> "
-  thing = gets.chomp.downcase
+  thing = gets.chomp.downcase.capitalize
+  break if thing == 'Finished'
   things << thing
-  break if thing == 'finished'
 end
 
 puts "\n#{name} thanks for trying our Time Capsule maker."
-puts" Here is a list of the items in your Time Capsule!"
+puts "Here is a list of the items in your Time Capsule!"
 
-things.each {|thing| puts "* " + thing}
+things_uniq = things.uniq
+things_uniq.each {|thing| puts "* " + thing + " (#{things.count(thing)})"}

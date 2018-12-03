@@ -7,13 +7,13 @@ name = gets.chomp
 
 puts "Please, list items you want to put into Time Capsule."
 
-thing = nil
+item = nil
 
 loop do
   print "> "
-  thing = gets.chomp.downcase.capitalize
-  break if thing == 'Finished'
-  things << thing
+  item = gets.chomp.downcase.capitalize
+  break if item == 'Finished'
+  things << item
 end
 
 puts "\n#{name} thanks for trying our Time Capsule maker."
